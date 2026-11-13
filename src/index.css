@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    color: #1e293b;
+    background-color: #f1f5f9;
+  }
+}
+
+/* Custom styling for worksheet print and interlinear annotations */
+.font-serif-kr {
+  font-family: 'Batang', 'KoPub Batang', serif;
+}
+
+.annotated-token {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 2px;
+  vertical-align: bottom;
+}
+
+.token-gloss {
+  font-size: 0.72rem;
+  line-height: 1;
+  color: #0369a1;
+  font-weight: 500;
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+
+.token-role {
+  font-size: 0.7rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #0284c7;
+  margin-top: 2px;
+}
+
+.clause-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #0284c7;
+  letter-spacing: -0.02em;
+}
+
+/* A4 Print layout rules */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 8mm 8mm 8mm;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 20mm 0 !important;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .print-page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}
+
+/* Hide scrollbar for tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

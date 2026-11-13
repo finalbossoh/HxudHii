@@ -1,0 +1,6 @@
+{
+  "name": "수능/학평 영어 모의고사 지문 분석지 생성기 (Exam Analyzer Pro)",
+  "description": "수능 및 고1·고2·고3 전국연합학력평가 영어 지문을 분석하여 어법·구문 표시, 직독직해 주석, Flow Check, Grammar+, CHECK 퀴즈, 어휘장을 갖춘 전문 지문분석지로 제작·인쇄·다운로드하는 솔루션",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
